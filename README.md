@@ -1,7 +1,7 @@
 # Income and Expense Tracker  
 
 ## Description  
-This project is a web application built with Django that allows users to track their income and expenses. Users can register, log in, and manage their financial records, including adding new income and expense entries, viewing their financial dashboard, and receiving email confirmations for account activation.  
+This project is a web shop application built with Django that allows users to track their income and expenses. Users can register, log in, and manage their financial records, including adding new income and expense entries, viewing their financial dashboard, and receiving email confirmations for account activation.  
 
 ## Features  
 - User registration and authentication  
@@ -13,7 +13,7 @@ This project is a web application built with Django that allows users to track t
 ## Technologies Used  
 - Python  
 - Django  
-- SQLite (or any other database of your choice)  
+
 - HTML/CSS for frontend  
 - Django REST Framework (optional for API features)  
 
@@ -36,21 +36,18 @@ This project is a web application built with Django that allows users to track t
 3. Install the required packages:
    ```bash
    pip install -r requirements.txt
-4. Set up the setting:
-   ```bash
-   mv settings.py.sample settings.py  # On Windows use `ren settings.py.sample settings.py`
-5. Set up the database:
+4. Set up the database:
    ```bash
    python manage.py migrate
-6. Run the development server:
+   and after that : makemigrations 
+5. Run the development server:
    ```bash
     python manage.py runserver  
-7. Access the application:
+6. Access the application:
 Open your web browser and go to http://127.0.0.1:8000/.
 
 Usage
 Register a new account by filling out the registration form.
-Activate your account using the link sent to your email.
 Log in to access the dashboard.
 Add income and expenses through the provided forms on the dashboard.
 View your financial summary on the dashboard.
