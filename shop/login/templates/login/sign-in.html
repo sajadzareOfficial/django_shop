@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sign-in.css' %}">
+  
+    
+</head>
+
+<body>
+  
+  <section class="section">
+        <div class="form-div-style">
+              <div>
+                {% load static %}
+                <img class="img" src="{% static 'images/logo.webp' %}" alt="توضیحات عکس">
+
+                {% comment %} <img  class="img" src="./logo.webp" alt=""> {% endcomment %}
+              </div>
+              
+
+              <form class="form" method="get"  action="{% url 'sign_in' %}" >
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li class="{{ message.tags }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <div>
+                      <input  type="text" placeholder="نام مستعار"  name="name">
+                    </div>
+
+
+                    <div>
+                      <input  type="email" placeholder="ایمیل" name="email">
+                    </div>
+
+
+                    <div>
+                      <input  type="password" placeholder="رمز عبور" name="password">
+                    </div>
+
+
+                    <div>
+                      <input  type="password" placeholder="تکرار رمز عبور " name="password_utent">
+                    </div>
+
+
+                    <div>
+                      <input type="checkbox" name="checkbox" id="checkbox"  class="checkbox1"> 
+                      <label for="checkbox">قوانین <b>اقا سجاد</b> رو میپذیرم </label>
+                    </div>
+
+
+                    <div class="buton">
+                    <input type="submit" value="ثبت نام">
+                    </div>
+
+              </form>
+                
+        </div>
+  </section> 
+
+</body>
+</html>

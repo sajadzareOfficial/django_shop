@@ -1,0 +1,65 @@
+body{
+    background-color: #00BB8C;
+}
+
+/* ------------------------------------section----------------------------------------- */
+.form-div-style{
+    background-color: white ;
+    border-radius: 3%;
+    width: 30vw;
+    height: 83vh;
+    border: 10px solid white;
+    position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+}
+
+.img{
+    position: absolute;
+            top: 12%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+}
+
+.form{
+     width: 18vw;
+
+    position: absolute;
+            top: 61%;
+            left: 71%;
+            transform: translate(-50%, -50%);
+}
+
+.form div{
+    padding: 0.2em;
+}
+
+.form input:not(.checkbox1,.img){
+/* .form input{ */
+    
+    margin: 2%;
+    padding: 5%;
+
+    /* position */
+    position: static;
+    top: 50px;
+    left: 35%;
+    /*  */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 8px;
+    border: 2px solid #E0E0E0;
+    font-size: large ;
+    width: 153%;
+    height: 200%;
+}
+
+.buton{
+    margin-right: 35%;
+    width: 60%;
+}
+
+

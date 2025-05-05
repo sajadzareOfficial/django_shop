@@ -1,0 +1,241 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main_page</title>
+
+  <style>
+    body{
+      background-color: #1eb35b;
+      margin: 0%;
+    }
+    a{
+          text-decoration: none;
+
+        }
+    .header{
+            width: 100vw;
+            height: 17vh;
+            background-color: #fe0000;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+        }
+        .header-img{
+            width: 15%;
+            height: 100%;
+
+        }
+        .header-login{
+          width: 150px;
+          height: 70px;
+          /* background-color: #0587e3; */
+          position: absolute;
+          left: 15.9%;
+          top:4%;
+          /* border: 2px solid wheat; */
+          border-radius: 10px;
+        }
+        .img-login{
+          margin: 0%;
+          position: absolute;
+          /* right: 0%; */
+          top: 0%;
+          right: 35%;
+
+        }
+        .text-header-login{
+          text-align: center;
+          /* font-size: larg; */
+          margin-top:   30%;
+        }
+        .text-header{
+            width: 81.8%;
+            height: 17.5%;
+            background-color: #0587e3;
+            position: relative;
+            left:20% ;
+            top: 0.89%;
+
+        }
+        .header-text-div{
+            width: 80%;
+            height: 18%;
+            position: absolute;
+            right:0% ;
+        }
+        .p-text-in-header{
+          display: inline-block;
+          padding: 0%;
+          position: absolute;
+          right: 2%;
+          text-align: center;
+          font-size: xx-large;
+          font-weight: bold;
+          /* text-shadow: 0.2px 1px blue ; */
+        }
+        
+    #header{
+      margin:  0%;
+      margin-top: 2px;
+      display: block;
+      width: 50vw;
+      height: 6vh;
+      background-color: antiquewhite;
+      position: relative;
+      left:25%;
+      border-radius: 20px;
+      
+    }
+    .div_content_header{
+      width: 75%;
+      
+      position: absolute;   
+      /* right: 5%; */
+      left: 49%;
+      /* left: 47%; */
+    }
+    .content-header{
+      margin:  0%;
+      direction: ltr;
+      /* padding-right: 2%; */
+      /* padding-top: 1%; */
+      font-size: x-large;
+      color: rgb(26, 30, 226);
+      text-shadow:1px 0px rgb(228, 85, 85) ;
+      
+      display: inline-block;
+      
+      /* min-width: 352px; */
+
+    }
+    .div-circles{
+      /* background-color: #fff; */
+      display: block;
+      width: 30%;
+      height: 100%;
+      position: relative;
+      min-width: 150px;
+      
+    }
+    .circle{
+      margin: 1.8%;
+      display:inline-block;
+      background-color: red;
+      border: .4rem  solid red ;
+      border-radius: 100%;
+      
+
+    }
+    #circle1{
+      margin-left: 20px;
+    }
+    .section{
+      width: 20vw;
+      height: 70vh;
+      background-color: #fff;
+      border-radius: 15px;
+      display: inline-block;
+      margin: 20px;
+      margin-top: 8px;
+
+    }
+    .section-img{
+      height: 40%;
+      background-color: rosybrown;
+      border-radius: 10px;
+    }
+    .hr{
+      margin: 0%; border: 2px solid wheat;
+    }
+    .section-texts{
+      font-size: xx-large;
+      font-weight: bold;
+      /* display: inline-block; */
+      /* direction: rtl; */
+      text-align: center;
+      margin: 14.9px;
+      /* position: absolute; */
+
+      /* right: 0%; */
+    }
+    .section-a{
+      text-align: center;
+      display: block;
+      font-size: 50px ;
+      background-color: rgb(228, 85, 85);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <!-- <div class="header-text-div"> -->
+      
+        <p class="p-text-in-header"><a href="">  گامی فراتر از تصور   sj-kala</a></p>
+        {% if login == True %}
+        
+        {% else %}
+        <div class="header-login">
+          <a href="/login">
+          <img  class="img-login" src="/static/images/login.svg" alt="">
+        
+           <p class="text-header-login">ورود|ثبت نام</p></a>
+
+         </div> 
+         {% endif %}
+        <!-- <a  id="a-login-mainpage" class="text-header-font" href="">صفحه نخست</a>  -->
+         
+    <!-- </div> -->
+
+
+    <div class="content">
+      <div class="header-img">
+          <img  style="width: 100%; height: 100%;" src="/static/images/photo_2025-04-20_23-57-01.jpg" alt="">
+          
+      </div>
+            
+
+    </div>
+  
+</header>
+
+  <nav id="header">
+    <div class="div_content_header">
+      
+      <p class="content-header"> تخفیف های بهاره <span style="font-weight: bold; color: #0587e3;">  ما  </span>را از دست ندهید</p>
+    </div>
+      <div class="div-circles">
+        <p class="circle" id="circle1">0{{time.day}}d</p>
+        <p class="circle" >{{time.h}}h</p>
+        <p class="circle" >{{time.m}}m</p>
+      </div>
+  </nav>
+  <section >
+    {% for product in prod%}
+
+    <div class="section">
+
+      <div class="section-img">
+        <img class="section-img" style="width: 100%; height: 100% ;" src="../../static/images/{{product.title}}.jpg" alt="">
+        <!-- <p class="hr"></p> -->
+        <p class="section-texts"><span>{{ product.title }}</span></p>
+        <p class="hr" ></p>
+        <p class="section-texts">قیمت :<span> {{ product.price}} </span></p>
+        <p class="hr" ></p>
+
+        <p class="section-texts">میزان تخفیف:<span>{{ product.offer }}</span></p>
+
+        <a  class="section-a" href="products/{{product.id}}">خرید</a>
+
+
+      </div>
+    </div>
+    {% endfor %}
+
+  </section>
+</body>
+</html>

@@ -1,0 +1,79 @@
+  
+body{
+  background-color: #00BB8C;
+}
+
+.form-div-style{
+/* min-height: 790px ; */
+
+  background-color: white ;
+  border-radius: 3%;
+  width: 30vw;
+  height: 60vh;
+  border: 10px solid white;
+  position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+}
+
+.img{
+  position: absolute;
+          top: 12%;
+          left: 51%;
+          transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+}
+
+.form{
+   width: 100%;
+
+  position: absolute;
+          top: 40%;
+          transform: translate(0%, -50%);
+}
+.inputs{
+width: 50%;
+
+}
+
+
+.form div{
+  padding: 0.2em;
+  
+  
+}
+
+.form input:not(.checkbox1,.img){
+  
+  margin: 10%;
+  padding: 7%;
+
+  position: static;
+  top: 50px;
+  left: 30%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 8px;
+  border: 2px solid #E0E0E0;
+  font-size: large ;
+  width: 153%;
+  height: 200%;
+}
+
+.buton{
+  width: 62%;
+  position: absolute;
+          right: -5%;
+
+  
+}
+.text{
+position: absolute;
+top: 150%;
+
+}
+
+
+
