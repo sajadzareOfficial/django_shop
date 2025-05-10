@@ -1,7 +1,6 @@
 from django.shortcuts import render
 import time,datetime
 from .models import mahsoolat
-# Create your views here.
 
 def choose_device(device):
     if device == "phone":
@@ -19,19 +18,9 @@ def choose_device(device):
 def mahsoolatt(request,login=False):
     if login==True:
         print("comed mennnn")
-    # k={
-    #     "phone":"گوشی",
-    #     "tablet": "تبلت",
-    #     "console": "کنسول",
-    #     "laptop":"لپتاپ",
-    #     "accessory":"لوازم جانبی",
-        
-    # }
+
     prod = mahsoolat.objects.all()
-    # for key,value in k.items():
-    #     if prod.product_type==key:
-    #         prod.product_type=value
-            
+
    
     time_in_now = datetime.datetime.now()
     day=3

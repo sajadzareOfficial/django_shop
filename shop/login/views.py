@@ -3,9 +3,10 @@ from django.shortcuts import render, HttpResponse
 from django import urls
 from .models import User as user
 from django.contrib import messages
-# Create your views here.
 from mahsoolat.views import mahsoolatt
 from django.shortcuts import redirect
+
+#def for adding user in db
 def adding_user(Name, Email, Password1):
   
         User = user.objects.create(
@@ -16,13 +17,11 @@ def adding_user(Name, Email, Password1):
 
 
   
-# add_user("sajadddddd","sajad@gmail.com","1234","1234")
 
 
-            
+# this def is said user can login or sign in              
 def find_users(Name,Email,Password,for_login:bool,for_signin:bool):
-  #[{'name': 'sajad', 'email': 'sajad1384zare@gmail.com', 'password': '1234'}, {'name': 'zahra', 'email': 'zahra@gmail.com', 
-#'password': '1234'}]
+  
   users=[]
   userrr= user.objects.all()
   for userr in userrr:
@@ -30,11 +29,9 @@ def find_users(Name,Email,Password,for_login:bool,for_signin:bool):
     print("namee",Name,"email",Email)
     users.append(users_data_dict)
   
-  print("users_list:",users)
   if for_signin==True:
       for useree in users:
         if useree.get("name")== Name and useree.get("email")==Email:
-          print("ammmmmddddd")
           return False
       return True
     
@@ -91,17 +88,13 @@ def sign_in(request):
 
 def logining(request):
 
-  # users=user.objects.all()
-  # for use in users:
-    # print(use)
+  
 
   usernam=request.GET.get("username")
   emai=request.GET.get("email")
   passwor=request.GET.get("password")
   print(passwor,"\n",type(passwor))
-  # if (usernam and passwor) != None:
   print("in logning \t",passwor , usernam,emai)
-      # if find_users(Name,Email,for_login=False,for_signin=True) ==True:
   if passwor !="" and usernam !="" and emai !="": 
     auth=find_users(Name=usernam,Email=emai,Password=passwor,for_login=True,for_signin=False)
     print("auth is",auth)
@@ -109,8 +102,7 @@ def logining(request):
       messages.warning(request,"...please add user first")
     if auth==True:
       messages.success(request,"...welcome")
-      # return redirect(mahsoolatt,urls.reverse(loginigen=True),)
-      # import requests
+
 
       url = "http://127.0.0.1:1040/products"
       data = {"login": True}
@@ -121,7 +113,6 @@ def logining(request):
           return redirect(mahsoolatt)
 
 
-      # return render(request,"mahsoolatt")
     if auth=="password Error":
       messages.warning(request,"password not True ...")
     if auth=="user not found":

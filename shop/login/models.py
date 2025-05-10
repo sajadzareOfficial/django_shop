@@ -8,8 +8,5 @@ class User(models.Model):
     def __str__(self):
         return self.name
     
-# class login(forms.Form):
-#     username = forms.CharField(max_length=150)
-#     password = forms.CharField(widget=forms.PasswordInput)
-    
+
     

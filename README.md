@@ -28,7 +28,7 @@ This project is a web shop application built with Django that allows users to tr
 1. **Clone the repository:**  
    ```bash  
    git clone https://github.com/sajadzareOfficial/django_shop.git   
-   cd accounting
+   
 2. Create a virtual environment:
    ```bash  
     python -m venv venv  
