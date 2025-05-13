@@ -8,25 +8,68 @@
 
   <style>
     body{
-      background-color: #1eb35b;
+      background-color:#ffffff;
       margin: 0%;
+      min-width: 681px;
+      min-height: 868px;
     }
     a{
           text-decoration: none;
 
         }
-    .header{
-            width: 100vw;
-            height: 17vh;
-            background-color: #fe0000;
+      .header{
+            margin-top: 10px;
+            width: 60vw;
+            height: 60px;
+            background-color: #f1f5f9;
+            border-radius: 20px;
+            /* background-color: red; */
+            border: 0.5px solid #f1f5f9;
+            position: relative;
+            left: 20%;
         }
         .content{
             width: 100%;
             height: 100%;
         }
+        .input{
+          display: inline-block;
+          width: 70%;
+          height: 70%;
+          position: relative;
+          left: 15%;
+          padding-top: 6px;
+         }
+         .searching{
+          display: inline;
+          position: absolute;
+          top: 14px;
+          left: 8px;
+         }
+        .input-1{
+          width: 100%;
+          height: 100%;
+          /* padding-top: 2%; */
+          position: relative; 
+          border-radius: 20px;
+          outline: none;
+          border: 2px solid #f5f5f5;
+          padding-left: 41px;
+        }
+        .input-1:focus{
+          color: red;
+        }
         .header-img{
-            width: 15%;
+            width: 10%;
             height: 100%;
+            border-radius: 25%;
+            display: inline-block;
+            /* margin-left: 2px; */
+            position: absolute;
+            top: 0%;
+            left: 0%;
+
+            
 
         }
         .header-login{
@@ -34,30 +77,31 @@
           height: 70px;
           /* background-color: #0587e3; */
           position: absolute;
-          left: 15.9%;
-          top:4%;
+          right: 0%;
+          /* top:4%; */
           /* border: 2px solid wheat; */
           border-radius: 10px;
         }
         .img-login{
           margin: 0%;
+          padding: 0%;
           position: absolute;
-          /* right: 0%; */
-          top: 0%;
-          right: 35%;
+          right: 18%;
+          top: -62%;
+          right: 0%;
+      }
 
-        }
         .text-header-login{
           text-align: center;
           /* font-size: larg; */
-          margin-top:   30%;
+          /* margin-top:   30%; */
         }
         .text-header{
             width: 81.8%;
             height: 17.5%;
-            background-color: #0587e3;
+            background-color: white ;
             position: relative;
-            left:20% ;
+            /* left:20% ; */
             top: 0.89%;
 
         }
@@ -69,12 +113,14 @@
         }
         .p-text-in-header{
           display: inline-block;
-          padding: 0%;
-          position: absolute;
-          right: 2%;
-          text-align: center;
           font-size: xx-large;
           font-weight: bold;
+          position:  absolute;
+          right: 0%;
+          margin: 0%;
+          margin-right: 2%;
+
+          margin-top: 1%;
           /* text-shadow: 0.2px 1px blue ; */
         }
         
@@ -82,8 +128,8 @@
       margin:  0%;
       margin-top: 2px;
       display: block;
-      width: 50vw;
-      height: 6vh;
+      width: 49%;
+      /* height: 6vh; */
       background-color: antiquewhite;
       position: relative;
       left:25%;
@@ -106,7 +152,7 @@
       font-size: x-large;
       color: rgb(26, 30, 226);
       text-shadow:1px 0px rgb(228, 85, 85) ;
-      
+      margin-top: 1%;
       display: inline-block;
       
       /* min-width: 352px; */
@@ -136,7 +182,7 @@
     .section{
       width: 20vw;
       height: 70vh;
-      background-color: #fff;
+      background-color: #f1f5f9;
       border-radius: 15px;
       display: inline-block;
       margin: 20px;
@@ -169,21 +215,35 @@
       background-color: rgb(228, 85, 85);
       border-radius: 10px;
     }
+    .footer{
+      background-color: #f1f5f9;
+      height: 30vh;
+    }
   </style>
 </head>
 <body>
   <header class="header">
     <!-- <div class="header-text-div"> -->
       
-        <p class="p-text-in-header"><a href="">  گامی فراتر از تصور   sj-kala</a></p>
+        <!-- <p class="p-text-in-header"><a href="">  گامی فراتر از تصور   sj-kala</a></p> -->
+         <div class="input">
+          <!-- <div class="searching"> -->
+          <!-- </div> -->
+            <form class="input"  action="">
+              <input class="input-1" type="text">
+              <input type="submit" style="display: none;">
+              <img class="searching" src="../../static/images/search-svgrepo-com.svg" >
+
+            </form>
+        </div>
         {% if login == True %}
         
         {% else %}
         <div class="header-login">
           <a href="/login">
-          <img  class="img-login" src="/static/images/login.svg" alt="">
+          <img class="img-login" src="../../static/images/undraw_login_weas.svg" alt="">
         
-           <p class="text-header-login">ورود|ثبت نام</p></a>
+           <!-- <p class="text-header-login">ورود|ثبت نام</p></a> -->
 
          </div> 
          {% endif %}
@@ -194,7 +254,7 @@
 
     <div class="content">
       <div class="header-img">
-          <img  style="width: 100%; height: 100%;" src="/static/images/photo_2025-04-20_23-57-01.jpg" alt="">
+          <img class="header-img" style="width: 100%; height: 100%;" src="/static/images/photo_2025-04-20_23-57-01.jpg" alt="">
           
       </div>
             
@@ -237,5 +297,8 @@
     {% endfor %}
 
   </section>
+  <footer class="footer">
+
+  </footer>
 </body>
 </html>
