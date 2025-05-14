@@ -216,50 +216,11 @@
       border-radius: 10px;
     }
     .footer{
+        position: absolute;
+        bottom: auto;
       background-color: #f1f5f9;
-      height: 20vh;
+      height: 30vh;
     }
-        .footer-div{
-            width: 100%;
-            height: 100%;
-            background-color: #f1f5f9;
-          }
-        .footer-img{
-            width: 10%;
-            height: 100%;
-            position: relative;
-            left: 2%;
-        }
-
-        .p-footer{
-            width: 50%;
-            /* height: 100%; */
-            display: inline;
-            position: absolute;
-            right: 0%;
-            text-align: center;
-            font-size: 3vw;
-            font-weight: bold;
-            color: rgb(252, 60, 12);
-
-        }
-        .phone-number{
-            position: relative;
-            left: 15%;
-            bottom: 10%;
-            margin: 0%;
-            display: inline-block;
-        }
-        #phone-number1{
-            padding: 20px;
-            font-size: 2vw;
-            font-weight: bold;
-            color: black;
-            border-radius: 25PX;
-            
-            padding-bottom: 0%;
-        }
-       
   </style>
 </head>
 <body>
@@ -285,7 +246,7 @@
         
         {% else %}
         <div class="header-login">
-          <a href="/login">
+          <a href="/products">
           <img class="img-login" src="../../static/images/undraw_login_weas.svg" alt="">
         
            <!-- <p class="text-header-login">ورود|ثبت نام</p></a> -->
@@ -320,7 +281,6 @@
       </div>
   </nav>
   <section >
-    {% for product in prod%}
 
     <div class="section">
 
@@ -339,27 +299,9 @@
 
       </div>
     </div>
-    {% endfor %}
 
   </section>
   <footer class="footer">
-      <div class="footer-div">
-          <img class="footer-img" src="/static/images/enamad.png" alt="">
-              <p class="p-footer">ساخته شده توسط اقا سجاد  <span>sj-kala</span></p>
-              <p class="phone-number">
-               <span id="phone-number1"> phone-number : <span style="font-size: 70%; color: #04fe00;">09928570193</span></span>
-               <br>
-               <br>
-               <br>
-               <br>
-               <span id="phone-number1"> telegram-id : <span style="font-size: 70%; color: #04fe00;"> Mr-sj1234</span></span>
-  
-  
-              </p>
-  
-      </div>
-  
-  
 
   </footer>
 </body>
