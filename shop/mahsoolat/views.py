@@ -45,7 +45,8 @@ def devices(request,id):
     print("salammmm")
     products= mahsoolat.objects.get(id=id)
     device= choose_type_op_device(products.product_type)
-    return render(request,"Main_page/products.html",context={"product":products,"device":device})
+    price=  products.price - ((products.price * products.offer  ) /100)
+    return render(request,"Main_page/products.html",context={"product":products,"device":device ,"after_offer":price})
 
 
 

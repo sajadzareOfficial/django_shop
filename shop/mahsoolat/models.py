@@ -22,8 +22,8 @@ class mahsoolat(models.Model):
     price=models.BigIntegerField(default=0)
     offer =models.IntegerField()
     hafezeh=models.CharField(max_length=7,default="0")
-
-    
+    image=models.ImageField(null=True,upload_to="products_img")
+    video = models.FileField(null=True,upload_to="Media/videos")
     
     def __str__(self):
         return self.title

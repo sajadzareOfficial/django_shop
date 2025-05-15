@@ -217,7 +217,10 @@
     }
     .footer{
       background-color: #f1f5f9;
-      height: 20vh;
+      width: 100vw;
+      height: 15vh;
+      position: fixed;
+      bottom:5px ;
     }
         .footer-div{
             width: 100%;
@@ -229,6 +232,8 @@
             height: 100%;
             position: relative;
             left: 2%;
+            bottom: 0%;
+            
         }
 
         .p-footer{
@@ -325,7 +330,7 @@
     <div class="section">
 
       <div class="section-img">
-        <img class="section-img" style="width: 100%; height: 100% ;" src="../../static/images/{{product.title}}.jpg" alt="">
+        <img class="section-img" style="width: 100%; height: 100% ;" src="{{product.image.url}}" alt="">
         <!-- <p class="hr"></p> -->
         <p class="section-texts"><span>{{ product.title }}</span></p>
         <p class="hr" ></p>
@@ -348,8 +353,6 @@
               <p class="p-footer">ساخته شده توسط اقا سجاد  <span>sj-kala</span></p>
               <p class="phone-number">
                <span id="phone-number1"> phone-number : <span style="font-size: 70%; color: #04fe00;">09928570193</span></span>
-               <br>
-               <br>
                <br>
                <br>
                <span id="phone-number1"> telegram-id : <span style="font-size: 70%; color: #04fe00;"> Mr-sj1234</span></span>
