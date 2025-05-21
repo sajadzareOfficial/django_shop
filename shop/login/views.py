@@ -1,5 +1,4 @@
-import requests
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from django import urls
 from .models import User as user
 from django.contrib import messages
@@ -106,11 +105,11 @@ def logining(request):
 
       url = "http://127.0.0.1:1040/products"
       data = {"login": True}
-      response = requests.post(url, json=data)
+      # response = requests.post(url, json=data)
 
-      if response.status_code == 200:
-          print("Data sent successfully!")
-          return redirect(mahsoolatt)
+      # if response.status_code == 200:
+      #     print("Data sent successfully!")
+      #     return redirect(mahsoolatt)
 
 
     if auth=="password Error":
