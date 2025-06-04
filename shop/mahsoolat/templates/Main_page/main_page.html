@@ -5,323 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>main_page</title>
-
-  <style>
-    body{
-      background-color:#ffffff;
-      margin: 0%;
-      min-width: 681px;
-      min-height: 868px;
-    }
-    a{
-          text-decoration: none;
-
-        }
-      .header{
-            margin-top: 10px;
-            width: 60vw;
-            height: 60px;
-            background-color: #f1f5f9;
-            border-radius: 20px;
-            /* background-color: red; */
-            border: 0.5px solid #f1f5f9;
-            position: relative;
-            left: 20%;
-        }
-        .content{
-            width: 100%;
-            height: 100%;
-        }
-        .input{
-          display: inline-block;
-          width: 70%;
-          height: 70%;
-          position: relative;
-          left: 15%;
-          padding-top: 6px;
-         }
-         .searching{
-          display: inline;
-          position: absolute;
-          top: 14px;
-          left: 8px;
-         }
-        .input-1{
-          width: 100%;
-          height: 100%;
-          /* padding-top: 2%; */
-          position: relative; 
-          border-radius: 20px;
-          outline: none;
-          border: 2px solid #f5f5f5;
-          padding-left: 41px;
-        }
-        .input-1:focus{
-          color: red;
-        }
-        .header-img{
-            width: 10%;
-            height: 100%;
-            border-radius: 25%;
-            display: inline-block;
-            /* margin-left: 2px; */
-            position: absolute;
-            top: 0%;
-            left: 0%;
-
-            
-
-        }
-        .header-login{
-          width: 150px;
-          height: 70px;
-          /* background-color: #0587e3; */
-          position: absolute;
-          right: 0%;
-          /* top:4%; */
-          /* border: 2px solid wheat; */
-          border-radius: 10px;
-        }
-        .img-login{
-          margin: 0%;
-          padding: 0%;
-          position: absolute;
-          right: 18%;
-          top: -62%;
-          right: 0%;
-      }
-
-        .text-header-login{
-          text-align: center;
-          /* font-size: larg; */
-          /* margin-top:   30%; */
-        }
-        .text-header{
-            width: 81.8%;
-            height: 17.5%;
-            background-color: white ;
-            position: relative;
-            /* left:20% ; */
-            top: 0.89%;
-
-        }
-        .header-text-div{
-            width: 80%;
-            height: 18%;
-            position: absolute;
-            right:0% ;
-        }
-        .p-text-in-header{
-          display: inline-block;
-          font-size: xx-large;
-          font-weight: bold;
-          position:  absolute;
-          right: 0%;
-          margin: 0%;
-          margin-right: 2%;
-
-          margin-top: 1%;
-          /* text-shadow: 0.2px 1px blue ; */
-        }
-        
-    #header{
-      margin:  0%;
-      margin-top: 2px;
-      display: block;
-      width: 49%;
-      /* height: 6vh; */
-      background-color: antiquewhite;
-      position: relative;
-      left:25%;
-      border-radius: 20px;
-      
-    }
-    .div_content_header{
-      width: 75%;
-      
-      position: absolute;   
-      /* right: 5%; */
-      left: 49%;
-      /* left: 47%; */
-    }
-    .content-header{
-      margin:  0%;
-      direction: ltr;
-      /* padding-right: 2%; */
-      /* padding-top: 1%; */
-      font-size: x-large;
-      color: rgb(26, 30, 226);
-      text-shadow:1px 0px rgb(228, 85, 85) ;
-      margin-top: 1%;
-      display: inline-block;
-      
-      /* min-width: 352px; */
-
-    }
-    .div-circles{
-      /* background-color: #fff; */
-      display: block;
-      width: 30%;
-      height: 100%;
-      position: relative;
-      min-width: 150px;
-      
-    }
-    .circle{
-      margin: 1.8%;
-      display:inline-block;
-      background-color: red;
-      border: .4rem  solid red ;
-      border-radius: 100%;
-      
-
-    }
-    #circle1{
-      margin-left: 20px;
-    }
-    .section{
-      width: 20vw;
-      height: 70vh;
-      background-color: #f1f5f9;
-      border-radius: 15px;
-      display: inline-block;
-      margin: 20px;
-      margin-top: 8px;
-
-    }
-    .section-img{
-      height: 40%;
-      background-color: rosybrown;
-      border-radius: 10px;
-    }
-    .hr{
-      margin: 0%; border: 2px solid wheat;
-    }
-    .section-texts{
-      font-size: xx-large;
-      font-weight: bold;
-      /* display: inline-block; */
-      /* direction: rtl; */
-      text-align: center;
-      margin: 14.9px;
-      /* position: absolute; */
-
-      /* right: 0%; */
-    }
-    .section-a{
-      text-align: center;
-      display: block;
-      font-size: 50px ;
-      background-color: rgb(228, 85, 85);
-      border-radius: 10px;
-    }
-    .footer{
-      background-color: #f1f5f9;
-      width: 100vw;
-      height: 15vh;
-      position: fixed;
-      bottom:5px ;
-    }
-        .footer-div{
-            width: 100%;
-            height: 100%;
-            background-color: #f1f5f9;
-          }
-        .footer-img{
-            width: 10%;
-            height: 100%;
-            position: relative;
-            left: 2%;
-            bottom: 0%;
-            
-        }
-
-        .p-footer{
-            width: 50%;
-            /* height: 100%; */
-            display: inline;
-            position: absolute;
-            right: 0%;
-            text-align: center;
-            font-size: 3vw;
-            font-weight: bold;
-            color: rgb(252, 60, 12);
-
-        }
-        .phone-number{
-            position: relative;
-            left: 15%;
-            bottom: 10%;
-            margin: 0%;
-            display: inline-block;
-        }
-        #phone-number1{
-            padding: 20px;
-            font-size: 2vw;
-            font-weight: bold;
-            color: black;
-            border-radius: 25PX;
-            
-            padding-bottom: 0%;
-        }
-       
-  </style>
+  <link rel="stylesheet" href="{% static 'css/mainPage.css' %}">
+  
 </head>
 <body>
   <header class="header">
-    <!-- <div class="header-text-div"> -->
-      
-        <!-- <p class="p-text-in-header"><a href="">  گامی فراتر از تصور   sj-kala</a></p> -->
-         <div class="input">
-          <!-- <div class="searching"> -->
-          <!-- </div> -->
+      <div class="content">
+          <img class="site-logo" src="/static/images/photo_2025-04-20_23-57-01.jpg" alt="">
+              {% if login == True %}
+                      
+                {% else %}
+            <div class="section-onder-the-header">
+                        <a href="/login">
+                        <img class="img-login" src="../../static/images/undraw_login_weas.svg" alt="">
+                        </a>
+
+            </div> 
+                      {% endif %}
+                        
             <form class="input"  action="{%url 'serching_divice'%}">
-              <input class="input-1" type="text" name="form-input-in-searching">
-              <!-- <input type="submit" > -->
-              <div>
+                <input class="input-1" type="text" name="form-input-in-searching">
+              
                 <label for="submit-searching"><img  style="display: block;"  class="searching" src="../../static/images/search-svgrepo-com.svg" ></label>
                 <button  id="submit-searching" type="submit" style="display: none;"></button>
-              </div>
-              
+                            
+                            
 
             </form>
+                          
         </div>
-        {% if login == True %}
+  </header>
         
-        {% else %}
-        <div class="header-login">
-          <a href="/login">
-          <img class="img-login" src="../../static/images/undraw_login_weas.svg" alt="">
-        
-           <!-- <p class="text-header-login">ورود|ثبت نام</p></a> -->
-
-         </div> 
-         {% endif %}
-        <!-- <a  id="a-login-mainpage" class="text-header-font" href="">صفحه نخست</a>  -->
-         
-    <!-- </div> -->
-
-
-    <div class="content">
-      <div class="header-img">
-          <img class="header-img" style="width: 100%; height: 100%;" src="/static/images/photo_2025-04-20_23-57-01.jpg" alt="">
-          
-      </div>
-            
-
-    </div>
-  
-</header>
-
   <nav id="header">
     <div class="div_content_header">
       
       <p class="content-header"> تخفیف های بهاره <span style="font-weight: bold; color: #0587e3;">  ما  </span>را از دست ندهید</p>
     </div>
       <div class="div-circles">
-        <p class="circle" id="circle1">0{{time.day}}d</p>
-        <p class="circle" >{{time.h}}h</p>
-        <p class="circle" >{{time.m}}m</p>
+        <p class="circle" id="hour_element">h</p>
+        <p class="circle" id="min_element">m</p>
+        <p class="circle" id="second">s</p>
       </div>
   </nav>
   <section >
@@ -365,5 +88,8 @@
   
 
   </footer>
+  <script src="{% static 'js/test.js' %}"></script>
+  <!-- <script src="./test.js "></script> -->
+
 </body>
 </html>
